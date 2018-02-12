@@ -10,8 +10,19 @@
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
-        // insert code here...
-        NSLog(@"Hello, World!");
+        int valor = 10;
+        int *ptr = NULL;
+
+        NSLog(@"Valor: %d", valor);
+
+        ptr = &valor;
+
+        NSLog(@"Ponteiro: %d", *ptr);
+
+        *ptr = *ptr + 10;
+
+        NSLog(@"Novo valor do ponteiro: %d", *ptr);
+        NSLog(@"Novo valor da variável original: %d", valor);
     }
     return 0;
 }
